@@ -2046,6 +2046,7 @@ p{font-size:13px!important;line-height:1.3!important}
 
 </style>
 <link rel="stylesheet" href="rm-final-polish.css?v=estetica_anterior_perf_20260624">
+<link rel="stylesheet" href="rm-functional-fixes.css?v=funcional_20260624">
 </head>
 <body class="ref-pro">
 
@@ -2068,7 +2069,7 @@ p{font-size:13px!important;line-height:1.3!important}
   <a href="#seriesRankingSection" title="Ranking">🏆</a>
   <a href="#memberSection" title="Hazte Socio">🤝</a>
   <a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a>
-  <a href="admin.html" title="Admin">⚙️</a>
+  
 </div>
 
 
@@ -2119,7 +2120,7 @@ p{font-size:13px!important;line-height:1.3!important}
 <div class="social-top">
     <a class="wa" target="_blank" href="https://wa.me/56994413797">☎</a>
     <a class="ig" target="_blank" href="https://www.instagram.com/cd_ricardomendez_sancarlos">◎</a>
-    <a class="fb" target="_blank" href="https://www.facebook.com/RICARDOMENDEZSANCARLOS">f</a>
+    <a class="fb" target="_blank" href="https://www.facebook.com/ricardomendezsancarlos">f</a>
   </div>
 
   
@@ -2133,16 +2134,7 @@ p{font-size:13px!important;line-height:1.3!important}
   </div>
 </section>
 
-<section class="sponsor-ticker-section">
-    <div class="ticker-title">★ Auspiciadores oficiales ★</div>
-    <div class="ticker-shell">
-      <button type="button">‹</button>
-      <div id="sponsorTicker" class="sponsor-ticker"></div>
-      <button type="button">›</button>
-    </div>
-  </section>
-
-  <section id="inicio" class="hero">
+<section id="inicio" class="hero">
     <div class="hero-copy">
       <div class="club-label">Club deportivo</div>
       <h1>RICARDO MÉNDEZ</h1>
@@ -2166,19 +2158,7 @@ p{font-size:13px!important;line-height:1.3!important}
     <div id="metrics" class="metrics-inner"></div>
   </section>
 
-  <section class="dual-home">
-    <div class="home-panel">
-      <div class="panel-head"><h3>Últimas noticias</h3><a href="#noticias">Ver todas</a></div>
-      <div id="homeNewsPreview" class="home-preview"></div>
-    </div>
-    <div class="home-panel">
-      <div class="panel-head"><h3>Galería destacada</h3><a href="#galeria">Ver más</a></div>
-      <div id="homeGalleryPreview" class="gallery-preview-mini"></div>
-    </div>
-  </section>
-
-  
-<section id="socios-formulario" class="section socios-form-section">
+  <section id="socios-formulario" class="section socios-form-section">
   <div class="section-head"><h2>Solicitud de socio</h2><p>Completa tus datos para sumarte al Club Deportivo Ricardo Méndez.</p></div>
   <form id="socioForm" class="socio-form">
     <input id="socioNombre" placeholder="Nombre completo" required>
@@ -2265,8 +2245,8 @@ p{font-size:13px!important;line-height:1.3!important}
 
 
 <script>window.CDRM_LOGO="logo_ricardo_mendez.png";</script>
-<script src="rm-audio-inline.js?v=estetica_anterior_perf_20260624"></script>
-<script src="app_force20260617v2.js?v=estetica_anterior_perf_20260624"></script>
+<script src="rm-audio-inline.js?v=funcional_20260624"></script>
+<script src="app_force20260617v2.js?v=funcional_20260624"></script>
 
 <div id="rmIaWidget" class="rm-ia-widget">
   <button id="rmIaToggle" class="rm-ia-toggle" type="button">
@@ -2335,7 +2315,7 @@ p{font-size:13px!important;line-height:1.3!important}
       box=document.createElement('div');
       box.id='rmSideButtons';
       box.className='rm-side-buttons';
-      box.innerHTML='<a href="#historyPrincipalSection" title="Historia">🏠</a><a href="#presidentsHistorySection" title="Presidentes">👥</a><a href="#directivaPublicSection" title="Directiva">🛡️</a><a href="#fixture" title="Fixture">📅</a><a href="#standings" title="Posiciones">📊</a><a href="#seriesRankingSection" title="Ranking">🏆</a><a href="#memberSection" title="Hazte Socio">🤝</a><a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a><a href="admin.html" title="Admin">⚙️</a>';
+      box.innerHTML='<a href="#historyPrincipalSection" title="Historia">🏠</a><a href="#presidentsHistorySection" title="Presidentes">👥</a><a href="#directivaPublicSection" title="Directiva">🛡️</a><a href="#fixture" title="Fixture">📅</a><a href="#standings" title="Posiciones">📊</a><a href="#seriesRankingSection" title="Ranking">🏆</a><a href="#memberSection" title="Hazte Socio">🤝</a><a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a>';
       document.body.appendChild(box);
     }
   }
@@ -2584,7 +2564,7 @@ p{font-size:13px!important;line-height:1.3!important}
       box.id = 'rmSideButtons';
       box.className = 'rm-side-buttons rm-buttons-over-history-fixed';
       box.setAttribute('aria-label','Navegación rápida');
-      box.innerHTML = '<a href="#historyPrincipalSection" title="Historia">🏠</a><a href="#presidentsHistorySection" title="Presidentes Históricos">👥</a><a href="#directivaPublicSection" title="Directiva">🛡️</a><a href="#fixture" title="Fixture">📅</a><a href="#standings" title="Posiciones">📊</a><a href="#seriesRankingSection" title="Ranking">🏆</a><a href="#memberSection" title="Hazte Socio">🤝</a><a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a><a href="admin.html" title="Admin">⚙️</a>';
+      box.innerHTML = '<a href="#historyPrincipalSection" title="Historia">🏠</a><a href="#presidentsHistorySection" title="Presidentes Históricos">👥</a><a href="#directivaPublicSection" title="Directiva">🛡️</a><a href="#fixture" title="Fixture">📅</a><a href="#standings" title="Posiciones">📊</a><a href="#seriesRankingSection" title="Ranking">🏆</a><a href="#memberSection" title="Hazte Socio">🤝</a><a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a>';
       document.body.appendChild(box);
     }
     box.classList.add('rm-buttons-over-history-fixed');
@@ -2756,7 +2736,7 @@ p{font-size:13px!important;line-height:1.3!important}
       box.id = 'rmSideButtons';
       box.className = 'rm-side-buttons rm-buttons-inside-history';
       box.setAttribute('aria-label','Navegación rápida');
-      box.innerHTML = '<a href="#historyPrincipalSection" title="Historia">🏠</a><a href="#presidentsHistorySection" title="Presidentes Históricos">👥</a><a href="#directivaPublicSection" title="Directiva">🛡️</a><a href="#fixture" title="Fixture">📅</a><a href="#standings" title="Posiciones">📊</a><a href="#seriesRankingSection" title="Ranking">🏆</a><a href="#memberSection" title="Hazte Socio">🤝</a><a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a><a href="admin.html" title="Admin">⚙️</a>';
+      box.innerHTML = '<a href="#historyPrincipalSection" title="Historia">🏠</a><a href="#presidentsHistorySection" title="Presidentes Históricos">👥</a><a href="#directivaPublicSection" title="Directiva">🛡️</a><a href="#fixture" title="Fixture">📅</a><a href="#standings" title="Posiciones">📊</a><a href="#seriesRankingSection" title="Ranking">🏆</a><a href="#memberSection" title="Hazte Socio">🤝</a><a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a>';
       document.body.appendChild(box);
     }
     box.classList.remove('rm-buttons-over-history-fixed','rm-quick-center-compact-ok','rm-quick-buttons-over-history');
@@ -5051,5 +5031,6 @@ p{font-size:13px!important;line-height:1.3!important}
 
 </script>
 <script src="rm-final-polish.js?v=estetica_anterior_perf_20260624"></script>
+<script src="rm-functional-fixes.js?v=funcional_20260624"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-window.RM_HIMNO_INLINE_SRC = './assets/himno-rimen.mp3';
+window.RM_HIMNO_INLINE_SRC = 'himno-rimen.mp3';
 
 
 /* =========================================================

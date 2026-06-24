@@ -181,6 +181,14 @@
 
 </style>
 <link rel="stylesheet" href="rm-final-polish.css?v=estetica_anterior_perf_20260624">
+
+<style id="rm-admin-presidents-clear-style">
+#tab-presidents .admin-help{color:#cfd8e8;line-height:1.4;margin:0 0 12px}
+#tab-presidents label{display:block;color:#f7d36b;font-weight:800;margin:11px 0 5px}
+#tab-presidents input{width:100%;box-sizing:border-box}
+#tab-presidents #addPresident{margin-top:12px}
+</style>
+
 </head>
 <body class="admin-body"><div class="bg"></div><main class="admin-main">
 <section id="loginPanel" class="login"><h1>Panel administrador</h1><p>Acceso privado. Ingresa la clave.</p><input id="adminPassword" type="password" placeholder="Clave de administrador"><button id="loginBtn">Ingresar</button></section>
@@ -218,7 +226,18 @@
 <input id="matchBroadcast" placeholder="Transmisión / Link"><input id="matchDate" placeholder="Día y hora"><input id="matchPlace" placeholder="Lugar"><input id="matchLogoUrl" placeholder="URL logo rival"><input id="matchLogoFile" type="file" accept="image/*"><button id="saveMatch">Guardar partido</button></div>
 <div class="tab-content hidden" id="tab-history"><h2>Historia</h2><textarea id="historyText" placeholder="Historia del club"></textarea><input id="presidentName" placeholder="Presidente actual"><input id="historyPhoto" type="file" accept="image/*"><button id="saveHistory">Guardar historia</button></div>
 <div class="tab-content hidden" id="tab-directors"><h2>Directiva</h2><input id="directorRole" placeholder="Cargo"><input id="directorName" placeholder="Nombre"><button id="addDirector">Agregar</button><div id="directorsList"></div></div>
-<div class="tab-content hidden" id="tab-presidents"><h2>Presidentes</h2><input id="presidentGalleryName" placeholder="Nombre"><input id="presidentPeriod" placeholder="Periodo"><input id="presidentPhoto" type="file" accept="image/*"><button id="addPresident">Agregar presidente</button><div id="presidentsList"></div></div>
+<div class="tab-content hidden" id="tab-presidents">
+  <h2>Presidentes Históricos</h2>
+  <p class="admin-help">Carga una fotografía, el nombre y el año o período de presidencia. Al guardar, aparecerá en la página pública.</p>
+  <label>Nombre completo del presidente</label>
+  <input id="presidentGalleryName" placeholder="Ej: Juan Pérez">
+  <label>Año o período de presidencia</label>
+  <input id="presidentPeriod" placeholder="Ej: 1998 - 2002">
+  <label>Fotografía del presidente</label>
+  <input id="presidentPhoto" type="file" accept="image/*">
+  <button id="addPresident" type="button">Guardar presidente histórico</button>
+  <div id="presidentsList"></div>
+</div>
 <div class="tab-content hidden" id="tab-results">
 
 <div class="admin-card results-warning-box">

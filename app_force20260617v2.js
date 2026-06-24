@@ -28,7 +28,7 @@ const DEFAULT_DATA = {
   siteConfig:{
     whatsapp:'56994413797',
     instagram:'https://www.instagram.com/cd_ricardomendez_sancarlos',
-    facebook:'https://www.facebook.com/RICARDOMENDEZSANCARLOS',
+    facebook:'https://www.facebook.com/ricardomendezsancarlos',
     blue:'#00c8ff',
     gold:'#f7d36b'
   },
@@ -2327,7 +2327,7 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
       wrap=document.createElement('div');
       wrap.id='topMusicPlayer';
       wrap.className='top-music-player';
-      wrap.innerHTML='<button id="musicToggleBtn" type="button" aria-label="Reproducir himno Ricardo Méndez"><span id="musicIcon">▶</span><strong>Himno RM</strong></button><input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.60" aria-label="Volumen música"><audio id="clubMusicAudio" preload="auto" loop playsinline><source src="./assets/himno-rimen.mp3" type="audio/mpeg"><source src="assets/himno-rimen.mp3" type="audio/mpeg"></audio>';
+      wrap.innerHTML='<button id="musicToggleBtn" type="button" aria-label="Reproducir himno Ricardo Méndez"><span id="musicIcon">▶</span><strong>Himno RM</strong></button><input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.60" aria-label="Volumen música"><audio id="clubMusicAudio" preload="auto" loop playsinline><source src="himno-rimen.mp3" type="audio/mpeg"><source src="himno-rimen.mp3" type="audio/mpeg"></audio>';
       document.body.prepend(wrap);
     }
     const audio=document.getElementById('clubMusicAudio');
@@ -2553,8 +2553,6 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
 
   function initCounter(){
     ensureVisitorBox();
-    setVisits(localStorage.getItem('rm_visit_count_public') || 0);
-    supabaseVisitCounter();
   }
 
   document.addEventListener('DOMContentLoaded', ()=>{
@@ -2578,8 +2576,8 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
   if(window.__RM_AUDIO_REVIEW_OK__) return; window.__RM_AUDIO_REVIEW_OK__=true;
   document.addEventListener('DOMContentLoaded',()=>{
     const a=document.getElementById('clubMusicAudio');
-    if(a && !a.querySelector('source[src="./assets/himno-rimen.mp3"]')){
-      const s=document.createElement('source'); s.src='./assets/himno-rimen.mp3'; s.type='audio/mpeg'; a.prepend(s); a.load();
+    if(a && !a.querySelector('source[src="himno-rimen.mp3"]')){
+      const s=document.createElement('source'); s.src='himno-rimen.mp3'; s.type='audio/mpeg'; a.prepend(s); a.load();
     }
   });
 })();
@@ -2787,7 +2785,7 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
         <a href="#seriesRankingSection" title="Ranking">🏆</a>
         <a href="#memberSection" title="Hazte Socio">🤝</a>
         <a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a>
-        <a href="admin.html" title="Admin">⚙️</a>`;
+        `;
       document.body.appendChild(box);
     }
 
@@ -2811,9 +2809,9 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
         </button>
         <input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.70" aria-label="Volumen música">
         <audio id="clubMusicAudio" preload="auto" loop playsinline>
-          <source src="./assets/himno-rimen.mp3" type="audio/mpeg">
-          <source src="/assets/himno-rimen.mp3" type="audio/mpeg">
-          <source src="assets/himno-rimen.mp3" type="audio/mpeg">
+          <source src="himno-rimen.mp3" type="audio/mpeg">
+          <source src="himno-rimen.mp3" type="audio/mpeg">
+          <source src="himno-rimen.mp3" type="audio/mpeg">
         </audio>`;
       document.body.prepend(wrap);
     }
@@ -2829,7 +2827,7 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
     function getAudio(){
       if(rmAudio) return rmAudio;
       // Audio creado por JS: suele funcionar mejor en celular al iniciar con click del usuario
-      rmAudio = new Audio('./assets/himno-rimen.mp3');
+      rmAudio = new Audio('himno-rimen.mp3');
       rmAudio.loop = true;
       rmAudio.preload = 'auto';
       rmAudio.volume = Number(vol.value || 0.70);
@@ -2837,7 +2835,7 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
         // fallback a ruta absoluta
         if(rmAudio && !rmAudio.dataset.fallback){
           rmAudio.dataset.fallback = '1';
-          rmAudio.src = '/assets/himno-rimen.mp3';
+          rmAudio.src = 'himno-rimen.mp3';
           rmAudio.load();
         }
       });
@@ -2931,11 +2929,11 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
   window.__RM_LATERALES_AUDIO_REVISION_FINAL__ = true;
 
   const AUDIO_ROUTES = [
-    './assets/himno-rimen.mp3',
-    'assets/himno-rimen.mp3',
-    './assets/himno-rimen.mp3',
-    './assets/himno-rimen.mp3',
-    '/assets/himno-rimen.mp3'
+    'himno-rimen.mp3',
+    'himno-rimen.mp3',
+    'himno-rimen.mp3',
+    'himno-rimen.mp3',
+    'himno-rimen.mp3'
   ];
 
   let audio = null;
@@ -2957,7 +2955,7 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
         <a href="#seriesRankingSection" title="Ranking">🏆</a>
         <a href="#memberSection" title="Hazte Socio">🤝</a>
         <a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a>
-        <a href="admin.html" title="Admin">⚙️</a>`;
+        `;
       document.body.appendChild(box);
     }
     box.hidden = false;
@@ -2979,10 +2977,10 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
         </button>
         <input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.80" aria-label="Volumen música">
         <audio id="clubMusicAudio" preload="auto" loop playsinline controlslist="nodownload">
-          <source src="./assets/himno-rimen.mp3" type="audio/mpeg">
-          <source src="assets/himno-rimen.mp3" type="audio/mpeg">
-          <source src="./assets/himno-rimen.mp3" type="audio/mpeg">
-          <source src="./assets/himno-rimen.mp3" type="audio/mpeg">
+          <source src="himno-rimen.mp3" type="audio/mpeg">
+          <source src="himno-rimen.mp3" type="audio/mpeg">
+          <source src="himno-rimen.mp3" type="audio/mpeg">
+          <source src="himno-rimen.mp3" type="audio/mpeg">
         </audio>`;
       document.body.prepend(wrap);
     }
@@ -3151,7 +3149,7 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(finalRunAll,700);se
         <a href="#seriesRankingSection" title="Ranking">🏆</a>
         <a href="#memberSection" title="Hazte Socio">🤝</a>
         <a href="#sponsorsBottomSection" title="Auspiciadores">⭐</a>
-        <a href="admin.html" title="Admin">⚙️</a>`;
+        `;
       document.body.appendChild(box);
     }
     box.classList.add('rm-top-quick-buttons');
