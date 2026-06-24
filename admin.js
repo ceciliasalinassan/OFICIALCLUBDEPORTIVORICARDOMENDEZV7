@@ -144,7 +144,8 @@ async function pushCloud(d){
     {key:'siteConfig',value:JSON.stringify(d.siteConfig)},
     {key:'appearance',value:JSON.stringify(d.appearance)},
     {key:'nextMatch',value:JSON.stringify(d.nextMatch)},
-    {key:'history',value:JSON.stringify(d.history)}
+    {key:'history',value:JSON.stringify(d.history)},
+    {key:'playerHighlights',value:JSON.stringify(d.playerHighlights||[])}
   ]);
   await replaceTable('directors',(d.directors||[]).map((x,i)=>({role:x.role||'',name:x.name||'',sort_order:i})));
   await replaceTable('sponsors',(d.sponsors||[]).map((x,i)=>({name:x.name||'',url:x.url||'',sort_order:i})));
